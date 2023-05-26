@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="osPushSalaryData_SHR" targetNamespace="http://sany.com/shr/001/pushsalarydata"
+                  xmlns:p1="http://sany.com/shr/001/pushsalarydata"
+                  xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+                  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsdl:documentation/>
+    <wsp:UsingPolicy wsdl:required="true"/>
+    <wsp:Policy wsu:Id="OP_osPushSalaryData_SHR"/>
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://sany.com/shr/001/pushsalarydata"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sany.com/shr/001/pushsalarydata">
+            <xsd:element name="MT_PushSalaryDataResp" type="DT_PushSalaryDataResp"/>
+            <xsd:element name="MT_PushSalaryDataReq" type="DT_PushSalaryDataReq"/>
+            <xsd:complexType name="DT_PushSalaryDataResp">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">461d0c78bc5611ea9dae00000083f252</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="RETURN" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">3e5bc0babc5611eaa2b02c27d7393f26
+                            </xsd:appinfo>
+                            <xsd:documentation>表</xsd:documentation>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="ZLCBH" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5bc0b6bc5611eaa8812c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>审批流程编号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZCGHS" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5bc0b7bc5611eac31e2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>接收成功行数</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="MSGTYP" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5bc0b8bc5611eabf282c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>消息类型</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="MESSAGE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5bc0b9bc5611ea92782c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>消息文本</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DT_PushSalaryDataReq">
+                <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/VersionID">ec659935175e11eb8b0300000083f252</xsd:appinfo>
+                </xsd:annotation>
+                <xsd:sequence>
+                    <xsd:element name="HEAD" minOccurs="0">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">3e5a971abc5611eaa1db2c27d7393f26
+                            </xsd:appinfo>
+                            <xsd:documentation>结构</xsd:documentation>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="FNUMBER" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a7e60bc5611eab6822c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>审批流程编号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZLCZHS" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a9719bc5611eabe2d2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>流程总行数</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="TAB1" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:annotation>
+                            <xsd:appinfo source="http://sap.com/xi/TextID">3e5b95ecbc5611ea886b2c27d7393f26
+                            </xsd:appinfo>
+                            <xsd:documentation>表</xsd:documentation>
+                        </xsd:annotation>
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="SANY119" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a04175e11ebab72286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>养老保险单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY121" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a05175e11eb92d2286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>失业保险单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY120" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a06175e11eba9b7286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>医疗保险单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY123" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a07175e11eba6cc286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>生育保险单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY122" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a08175e11ebbf46286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>工伤保险单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY124" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ec611a09175e11eb9029286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>公积金单位缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY104" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d39ff8d611ea8e3a286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>随任津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY128" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a0f8d611eaaf6b286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>财务当月实际发放伙补金额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY082" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a1f8d611ea892b286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>工作签工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY067" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a2f8d611ea8a35286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>年终奖合计</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY129" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a3f8d611ea9f5b286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>当月挂个人账金额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY126" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a4f8d611eac679286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>财务单独发放金额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY136" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a5f8d611eacabe286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>专项激励</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="NATIONALITY" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            ba78d3a6f8d611ea889d286ed488ca31
+                                        </xsd:appinfo>
+                                        <xsd:documentation>国籍</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FNUMBER" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a971bbc5611eaaf3d2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>审批流程编号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="LINENUM" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a971cbc5611eacf992c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>审批流程行号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZLCTJR" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a971dbc5611ea87db2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>流程提交人</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ENTRYADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a971ebc5611ea9d992c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>工资入账单位名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="STAIRADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a971fbc5611eab3e62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>一级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ACCESSADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a9720bc5611ea9afc2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>二级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FULLYADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5a9721bc5611ea81e02c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>三级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FOURADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac89dbc5611ea96032c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>四级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FIVEADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac89ebc5611eabddb2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>五级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SIXADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac89fbc5611eaa5422c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>六级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SEVENADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a0bc5611eaa6872c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>七级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="EIGHTAMINNAE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a1bc5611eabe6d2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>八级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="NINEADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a2bc5611eac1fc2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>九级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TENADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a3bc5611ea90762c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>十级部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDSTAIRADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d01cbfd11ea8f9f2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>一级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDACCESSADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d02cbfd11ea822c2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>二级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDFULLYADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d03cbfd11eaa99e2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>三级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDFOURADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d04cbfd11eab4de2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>四级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDFIVEADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d05cbfd11ea94702c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>五级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDSIXADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d06cbfd11eab7ab2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>六级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDSEVENADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d07cbfd11ea818f2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>七级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDEIGHTAMINNAE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a121d08cbfd11ea94f22c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>八级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDNINEADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a122e19cbfd11ea9c832c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>九级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDTENADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            4a122e1acbfd11ea88002c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>十级部门ID</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="WAERS" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a4bc5611eaa60b2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>付款币种</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PERSONNUM" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a5bc5611eacda12c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>员工编码</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PERSONNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a6bc5611ea81782c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>员工姓名</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PAYROLLADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a7bc5611ea81a02c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>工资发放单位名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ACCUNADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a8bc5611ea86992c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>核算结果职位名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ISLOCK" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8a9bc5611ea8b762c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>是否锁定</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ACCOUNSTATE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8aabc5611ea93212c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>核算状态</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="EMPSTATE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ac8abbc5611eacab72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>用工关系状态</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="IDCARD" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2f7bc5611ea86662c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>身份证号码</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PASSPORT" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2f8bc5611eaa3082c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>护照号码</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="BANKCODE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2f9bc5611ea84002c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>银行代码</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="BANKNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2fabc5611ea8c742c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>银行名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="BANKNUM" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2fbbc5611eaabb32c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>银行账号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="OPENNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2fcbc5611ea8e272c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>实际开户名</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PAYINGADMINNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2fdbc5611ea82632c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>纳税单位名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ATTENDANCEDAY" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2febc5611eaa51b2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>计时月标准工作天数</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="PIECESDAY" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae2ffbc5611ea81302c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>计件月标准工作天数</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY144" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae300bc5611eac3f72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>试用期月薪发放比例</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY148" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae301bc5611eac0a02c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>人员分类</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="LEVELNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae302bc5611eaa6da2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>职级</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="LEADERTYPE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae303bc5611ea9fb62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>干部类型</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="MINSALNORM" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae304bc5611ea9c052c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>上一条用工状态</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY142" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae305bc5611ea955e2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>最低工资标准</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY147" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5ae306bc5611eab3a92c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>上年度社平工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY002" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e35bc5611ea87492c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>计件工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY003" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e36bc5611ea940b2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>基本工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY008" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e37bc5611ea87492c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>浮动工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY011" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e38bc5611eac2e72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>应出勤</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY012" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e39bc5611eabdd12c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>实出勤</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY013" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3abc5611eac03f2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>就餐补贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY014" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3bbc5611eac3862c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>计件人员出差补贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY015" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3cbc5611ea9bc62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>岗位津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY016" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3dbc5611eaa6752c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>班组长津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY017" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3ebc5611eaa13e2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>加班工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY018" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e3fbc5611eab3f82c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>中班津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY019" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e40bc5611ea8eaf2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>晚班津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY020" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e41bc5611ea911b2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>补发工资（税后）</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY190" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e42bc5611ea8ae22c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>岗薪制绩效奖金</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY021" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e43bc5611ea98dd2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>住房补贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY022" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b0e44bc5611eaba1c2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>环境津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY023" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee2bc5611ea8cb12c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>其他津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY024" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee3bc5611ea92de2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>驻外津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY080" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee4bc5611ea87002c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>驻外天数</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY025" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee5bc5611eab9b62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>导师津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY118" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee6bc5611ea85a62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>院校津贴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY026" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee7bc5611eacafb2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>其他补发</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY027" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee8bc5611eaaa462c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>有薪缺勤工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY028" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ee9bc5611ea84932c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>其他加班费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY029" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eeabc5611ea93252c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>绩效奖金</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY114" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eebbc5611eaa6b02c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预扣税补发</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY030" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eecbc5611eab7582c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>零星奖金</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY031" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eedbc5611eabe222c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>宿舍费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY032" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eeebc5611eaa78f2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>水电费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY033" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2eefbc5611eaa4e72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>请假扣款</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY061" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b2ef0bc5611eaa4772c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>合计缺勤</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FSAL001" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b1fbc5611eacc1a2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>应发合计</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY035" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b20bc5611eaccb52c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>质量工资</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY036" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b21bc5611ea96092c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>罚款</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY037" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b22bc5611eac7e52c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>绩效补扣</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY039" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b23bc5611eac6e42c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>养老保险个人缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY040" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b24bc5611eab1a92c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>失业保险个人缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY041" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b25bc5611eace012c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>医疗保险个人缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY042" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b26bc5611ea85e32c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>公积金个人缴费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY043" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b27bc5611ea90362c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>养老保险补缴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY044" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b28bc5611ea9c532c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>失业保险补缴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY045" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b29bc5611ea8b4f2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>公积金补缴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY046" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2abc5611ea94182c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>医疗保险补缴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY047" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2bbc5611eaa0e32c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>生育保险补缴</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY048" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2cbc5611ea97dc2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>大病互助扣款</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY049" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2dbc5611eac6a02c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>借支款</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY050" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2ebc5611ea955a2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>代扣会费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY051" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b5b2fbc5611ea9c502c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>其他扣款（税后）</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY052" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7721bc5611ea86662c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>应税合计</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FSAL006" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7722bc5611eabd5d2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>代扣税</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY054" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7723bc5611eac33d2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>扣款(税前)</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FSAL002" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7724bc5611ea82a92c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>扣款合计</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY056" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7725bc5611ea9c372c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>合并计税项</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FSAL003" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7726bc5611eab2c82c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>实发合计</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="FSAL011" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7727bc5611eac7ab2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>备注</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="SANY059" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7728bc5611eab0252c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>差额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX001" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b7729bc5611ea86fc2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>个税起征点</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX002" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772abc5611eac8cc2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>子女教育专项扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX003" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772bbc5611eab64b2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>赡养老人专项扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX004" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772cbc5611eaa0532c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>住房贷款专项扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX005" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772dbc5611ea9a832c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>住房租金专项扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX006" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772ebc5611ea87a62c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>继续教育专项扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX007" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b772fbc5611ea965c2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>累计预扣预缴应纳税所得额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX010" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e3bc5611ea9be72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>累计基本减除费用</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX013" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e4bc5611ea9f322c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>累计专项附加扣除</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="TAX015" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e5bc5611eacfe72c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>累计预扣税额</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="LASTDATE" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e6bc5611ea84a92c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>最后计算时间</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="RESERVED1" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e7bc5611eab2402c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预留字段1</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="RESERVED2" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e8bc5611eaaad32c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预留字段2</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="RESERVED3" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95e9bc5611eaadfe2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预留字段3</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="RESERVED4" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95eabc5611ea920c2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预留字段4</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="RESERVED5" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            3e5b95ebbc5611ea95f32c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>预留字段5</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZLCTJGH" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            01373fabc4a011ea9c142c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>流程提交人工号</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZLCTJBM" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            01373facc4a011ea81db2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>流程提交人部门</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZLWNAME" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            01376c18c4a011ea9bed2c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>劳务派遣公司名称</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="ZFWF" type="xsd:string" minOccurs="0">
+                                    <xsd:annotation>
+                                        <xsd:appinfo source="http://sap.com/xi/TextID">
+                                            01376c19c4a011ea94e82c27d7393f26
+                                        </xsd:appinfo>
+                                        <xsd:documentation>服务费</xsd:documentation>
+                                    </xsd:annotation>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="MT_PushSalaryDataReq">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_PushSalaryDataReq" element="p1:MT_PushSalaryDataReq"/>
+    </wsdl:message>
+    <wsdl:message name="MT_PushSalaryDataResp">
+        <wsdl:documentation/>
+        <wsdl:part name="MT_PushSalaryDataResp" element="p1:MT_PushSalaryDataResp"/>
+    </wsdl:message>
+    <wsdl:portType name="osPushSalaryData_SHR">
+        <wsdl:documentation/>
+        <wsdl:operation name="osPushSalaryData_SHR">
+            <wsdl:documentation/>
+            <wsp:Policy>
+                <wsp:PolicyReference URI="#OP_osPushSalaryData_SHR"/>
+            </wsp:Policy>
+            <wsdl:input message="p1:MT_PushSalaryDataReq"/>
+            <wsdl:output message="p1:MT_PushSalaryDataResp"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="osPushSalaryData_SHRBinding" type="p1:osPushSalaryData_SHR">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"
+                          xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        <wsdl:operation name="osPushSalaryData_SHR">
+            <wsdlsoap:operation soapAction="http://sap.com/xi/WebService/soap1.1"
+                                xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            <wsdl:input>
+                <wsdlsoap:body use="literal" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <wsdlsoap:body use="literal" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="osPushSalaryData_SHRService">
+        <wsdl:port name="HTTP_Port" binding="p1:osPushSalaryData_SHRBinding">
+            <wsdlsoap:address
+                    location="http://podev01v-ap.sanygroup.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=Srv_SHR&amp;receiverParty=&amp;receiverService=&amp;interface=osPushSalaryData_SHR&amp;interfaceNamespace=http%3A%2F%2Fsany.com%2Fshr%2F001%2Fpushsalarydata"
+                    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+        <wsdl:port name="HTTPS_Port" binding="p1:osPushSalaryData_SHRBinding">
+            <wsdlsoap:address
+                    location="https://podev01v-ap.sanygroup.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=Srv_SHR&amp;receiverParty=&amp;receiverService=&amp;interface=osPushSalaryData_SHR&amp;interfaceNamespace=http%3A%2F%2Fsany.com%2Fshr%2F001%2Fpushsalarydata"
+                    xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
